@@ -1,4 +1,5 @@
 # a Dockerfile must begin with FROM command which specifies a parent image
+# reference: https://hub.docker.com/_/centos
 FROM centos:7
 
 # STEP 1: BUILDING a Docker image
@@ -6,7 +7,7 @@ FROM centos:7
 # EXECUTE: docker build . to build the image
 # EXECUTE: docker images | grep centos to view the image details
 
-# EXECUTE: docker docker build -t test-1 . to build the image under a custom tag
+# EXECUTE: docker build -t test-1 . to build the image under a custom tag
 # EXECUTE: docker images | grep test-1 to view the image details
 
 # -t option creates tag(alias) for an image, notice that IMAGE_ID (unique hash is the same for both images)
@@ -20,9 +21,10 @@ FROM centos:7
 #  -d starts docker container as a daemon running in the background
 #  --name assigns a container specified name which has to be unique, otherwise a randomly generated name is assigned
 #  /bin/bash -c "while true; do echo hello world; sleep 1; done" is necessary to keep the container running, otherwise it will immediately exit
+
 # EXECUTE: docker exec -it centos_base bash to create interactive session with the container
 # EXECUTE: docker stop centos_base to stop the container
-# EXECUTE: docker ps -a to list all containers on the system and verify successful termination of the container
+# EXECUTE: docker ps to list all running containers (you should see none because the container stopped the moment we ended the interactive session
 # EXECUTE: docker rm centos_base to remove the container
 
 # EXECUTE: docker ps to list all running containers (you should see none)

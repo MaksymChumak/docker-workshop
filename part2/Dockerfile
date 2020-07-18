@@ -1,14 +1,16 @@
 # a Dockerfile must begin with FROM command which specifies a parent image
+# reference: https://hub.docker.com/_/centos
 FROM centos:7
 
 # RUN executes a specified linux command
 # below we install some useful utils using yum package manager,
 # they will be available in all containers created from this image
-RUN yum -y update && yum -y install vim git curl
+RUN yum -y update && yum -y install vim lsof git curl
 
-# EXECUTE: # EXECUTE: docker images | grep centos to view the image details to build the image
+# EXECUTE: docker docker build -t centos_utils:7 . to build the image under a custom tag
+
 # EXECUTE: docker images | grep centos to view the image details
-# NOTE: notice the size difference between the bare bone centos:7 image and our centos_utils:7 image
+# NOTE: notice the size difference between the bare bones centos:7 image and new centos_utils:7 image
 
 # EXECUTE: docker ps to list all running containers (you should see none)
 # EXECUTE: docker run --name centos_utils -it centos_utils:7
