@@ -3,10 +3,10 @@ FROM centos:7
 
 # STEP 1: BUILDING a Docker image
 
-# EXECUTE: docker build . to build an image
+# EXECUTE: docker build . to build the image
 # EXECUTE: docker images | grep centos to view the image details
 
-# EXECUTE: docker docker build -t test-1 . to build an image under a custom tag
+# EXECUTE: docker docker build -t test-1 . to build the image under a custom tag
 # EXECUTE: docker images | grep test-1 to view the image details
 
 # -t option creates tag(alias) for an image, notice that IMAGE_ID (unique hash is the same for both images)
@@ -29,6 +29,3 @@ FROM centos:7
 # EXECUTE: docker run --name centos_base -it centos:7
 # EXECUTE: docker ps to list all running containers (you should see none because the container stopped the moment we ended the interactive session
 # EXECUTE: docker rm centos_base to remove the container
-
-
-
