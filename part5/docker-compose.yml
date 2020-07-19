@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  ui:
+    build: ./ui
+    ports:
+      - "3001:3000"
+    restart: always
+    # enable interactive mode in order for react-scripts start to work
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    restart: always

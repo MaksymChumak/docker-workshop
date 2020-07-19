@@ -16,7 +16,7 @@ EXECUTE: docker build -t alpine_node:13 ./ui to build ui image under a custom ta
 
 # NOTE: navigate to http://localhost:3001 in your browser to see the ui application
 # OPTIONS OVERVIEW:
-# -it start interactive session with the container
+# -it start interactive session with the container, reference https://stackoverflow.com/a/22287905
 #  --name assigns a container specified name which has to be unique, otherwise a randomly generated name is assigned
 #  -p setup port forwarding from port 3000 of the container to port 3001 of your machine
 # NOTICE: we are running ui container with an interactive session because react-scripts doesn't work when running as a daemon
