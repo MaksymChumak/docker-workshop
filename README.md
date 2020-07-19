@@ -1,4 +1,3 @@
-# Installation
 ## Docker Setup Guide
 
 * [Docker Overview](https://docs.docker.com/get-started/overview)
