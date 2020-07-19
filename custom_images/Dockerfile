@@ -6,5 +6,5 @@ RUN pip install awscli
 
 # ACTION: create an account on https://hub.docker.com/
 # EXECUTE: docker build -t <username>/node13-awscli:demo .
+# EXECUTE: docker login
 # EXECUTE: docker push <username>/node13-awscli:demo
-

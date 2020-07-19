@@ -1,4 +1,4 @@
-FROM maksymc/node13-awscli:demo
+FROM <username>/node13-awscli:demo
 
 # EXECUTE: docker build -t node-awscli:demo .
 # EXECUTE: docker images | grep node-awscli

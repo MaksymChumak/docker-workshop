@@ -53,5 +53,5 @@ CMD node server.js
 #  exit to terminate the session
 
 # EXECUTE: docker stop centos_node to stop the container
-# EXECUTE: docker ps to list all running containers (you should see none because the container stopped the moment we ended the interactive session
+# EXECUTE: docker ps -a to list all running containers (you should see none because the container stopped the moment we ended the interactive session
 # EXECUTE: docker rm centos_node to remove the container
