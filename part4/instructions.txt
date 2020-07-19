@@ -1,0 +1,30 @@
+EXECUTE: docker build -t centos_node:7 ./server to build the image under a custom tag (done in part 3)
+EXECUTE: docker build -t alpine_node:13 ./ui to build ui image under a custom tag
+
+# EXECUTE: docker ps to list all running containers (you should see none)
+# EXECUTE: docker run -p 3000:8080 --name centos_node -d centos_node:7
+# EXECUTE: docker run -p 3001:3000 --name alpine_node -it alpine_node:13
+# EXECUTE: docker ps to list all running containers (you should see server and ui containers)
+
+# NOTE: navigate to http://localhost:3000 in your browser to see the returned string from the server
+# OPTIONS OVERVIEW:
+#  -d starts docker container as a daemon running in the background
+#  --name assigns a container specified name which has to be unique, otherwise a randomly generated name is assigned
+#  -p setup port forwarding from port 8080 of the container to port 3000 of your machine
+# NOTICE: we didn't have to specify the command for the container to run when started(as we did in part 1)
+# because we defined CMD option in our Dockerfile
+
+# NOTE: navigate to http://localhost:3001 in your browser to see the ui application
+# OPTIONS OVERVIEW:
+# -it start interactive session with the container
+#  --name assigns a container specified name which has to be unique, otherwise a randomly generated name is assigned
+#  -p setup port forwarding from port 3000 of the container to port 3001 of your machine
+# NOTICE: we are running ui container with an interactive session because react-scripts doesn't work when running as a daemon
+
+# EXECUTE: docker stop centos_node
+# EXECUTE: docker stop alpine_node
+
+# EXECUTE: docker rm centos_node
+# EXECUTE: docker rm alpine_node
+
+# EXECUTE: docker ps to list all running containers (you should see none)
