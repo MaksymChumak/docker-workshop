@@ -32,4 +32,4 @@ COPY --from=build-stage /react-app/build /usr/share/nginx/html
 COPY --from=build-stage /react-app/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 # expose port on which NGINX is setup to listen
-EXPOSE 80
+EXPOSE 3000

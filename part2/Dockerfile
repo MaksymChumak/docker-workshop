@@ -16,7 +16,8 @@ RUN yum -y update && yum -y install vim lsof git curl
 # EXECUTE: docker run --name centos_utils -it centos_utils:7
 # EXECUTE: curl -I assistlist.ca
 # EXECUTE: vim test.txt to create a test file
-# EXECUTE: exit to exit the container and docker start centos_utils to start the container again
+# EXECUTE: exit to exit the container
+# EXECUTE: docker start centos_utils to start the container again
 # EXECUTE: docker exec -it centos_utils bash to create interactive session
 #  and check that previously created test.txt file persists with ls | grep test.txt
 # EXECUTE: docker stop centos_utils to stop the container
