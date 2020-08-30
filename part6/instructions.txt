@@ -1,0 +1,17 @@
+# EXECUTE: docker-compose build
+# EXECUTE: docker images notice the difference in image size between part5_ui and part6_ui images
+# EXECUTE: docker-compose up
+
+# ACTION: ssh inside the running ui container to view files copied from different build stages
+# EXECUTE: docker exec -it part6_ui_1 bash
+
+# EXECUTE: ls
+# EXECUTE: cat docker-entrypoint.sh used to show NGINX logs in the terminal where the container was started
+# EXECUTE: cd /usr/share/nginx/html to navigate to folder where artifacts created using yarn build were moved
+# EXECUTE: ls
+# NOTE: notice that the folder contains index.html served by NGINX
+
+# EXECUTE: cat /etc/nginx/conf.d/default.conf to view copied earlier from build stage NGINX configuration file
+
+# ACTION: stop the docker-compose up with CTRL+C
+# EXECUTE: docker-compose down --volumes to stop running containers
