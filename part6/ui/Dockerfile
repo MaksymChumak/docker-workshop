@@ -2,7 +2,7 @@
 
 # --------------------------------------------------------------------------------------------------------------
 # stage 0: builds and compiles production UI build
-FROM node:13.13.0-alpine as build-stage
+FROM node:14.15.0-alpine as build-stage
 
 # defines the working directory of a Docker container
 # RUN, CMD, ADD, COPY, or ENTRYPOINT command will be executed in the specified working directory

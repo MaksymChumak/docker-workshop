@@ -30,12 +30,12 @@ EXPOSE 8080
 # start application on container start
 CMD node server.js
 
-# EXECUTE: docker build -t centos_node:7 . to build the image under a custom tag
+# EXECUTE: docker build -t centos_node:7 . ; to build the image under a custom tag
 
-# EXECUTE: docker images | grep centos to view the image details
+# EXECUTE: docker images | grep centos ; to view the image details
 # NOTE: notice the size difference between the centos_utils:7 image and new centos_node:7 image
 
-# EXECUTE: docker ps to list all running containers (you should see none)
+# EXECUTE: docker ps ; to list all running containers (you should see none)
 # EXECUTE: docker run -p 3000:8080 --name centos_node -d centos_node:7
 # NOTE: navigate to http://localhost:3000 in your browser to see the returned string
 # OPTIONS OVERVIEW:
@@ -45,13 +45,13 @@ CMD node server.js
 # NOTICE: we didn't have to specify the command for the container to run when started(as we did in part 1)
 # because we defined CMD option in our Dockerfile
 
-# EXECUTE: docker exec -it centos_node bash to create interactive session with the container
+# EXECUTE: docker exec -it centos_node bash ; to create interactive session with the container
 # EXECUTE:
-#  pwd to see current working directory defined by WORKDIR
-#  ls to see that node server was successfuly copied
-#  lsof -i :8080 to see that node is running on port 8080
-#  exit to terminate the session
+#  pwd ; to see current working directory defined by WORKDIR
+#  ls ; to see that node server was successfuly copied
+#  lsof -i :8080 ; to see that node is running on port 8080
+#  exit ; to terminate the session
 
-# EXECUTE: docker stop centos_node to stop the container
-# EXECUTE: docker ps to list all running containers (you should see none because the container stopped the moment we ended the interactive session
-# EXECUTE: docker rm centos_node to remove the container
+# EXECUTE: docker stop centos_node ; to stop the container
+# EXECUTE: docker ps ; to list all running containers (you should see none because the container stopped the moment we ended the interactive session
+# EXECUTE: docker rm centos_node ; to remove the container

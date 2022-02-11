@@ -1,5 +1,5 @@
 # reference https://hub.docker.com/_/node/
-FROM node:13.13.0-alpine
+FROM node:14.15.0-alpine
 
 # defines the working directory of a Docker container
 # RUN, CMD, ADD, COPY, or ENTRYPOINT command will be executed in the specified working directory
